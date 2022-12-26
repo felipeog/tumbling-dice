@@ -96,7 +96,7 @@ body {
 
 /* number 1 */
 .face--front {
-  transform: rotateY(0turn);
+  transform: rotatey(0turn);
 }
 
 .face--front::after {
@@ -107,7 +107,7 @@ body {
 
 /* number 6 */
 .face--back {
-  transform: rotateY(0.5turn);
+  transform: rotatey(0.5turn);
 }
 
 .face--back::after {
@@ -121,7 +121,7 @@ body {
 
 /* number 5 */
 .face--left {
-  transform: rotateY(0.75turn);
+  transform: rotatey(0.75turn);
 }
 
 .face--left::after {
@@ -135,7 +135,7 @@ body {
 
 /* number 2 */
 .face--right {
-  transform: rotateY(0.25turn);
+  transform: rotatey(0.25turn);
 }
 
 .face--right::after {
@@ -146,7 +146,7 @@ body {
 
 /* number 3 */
 .face--top {
-  transform: rotateX(0.25turn);
+  transform: rotatex(0.25turn);
 }
 
 .face--top::after {
@@ -159,7 +159,7 @@ body {
 
 /* number 4 */
 .face--bottom {
-  transform: rotateX(0.75turn);
+  transform: rotatex(0.75turn);
 }
 
 .face--bottom::after {
