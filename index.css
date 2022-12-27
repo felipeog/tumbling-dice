@@ -12,7 +12,7 @@
   --color_old-white: #f8dab0;
   --color_rolling-stones: #df1a20;
 
-  --unit_duration: 6s;
+  --unit_duration: 4s;
   --unit_spacing: 6rem;
   --unit_dice-width: 8rem;
   --unit_dot-width: calc(var(--unit_dice-width) * 0.2);
