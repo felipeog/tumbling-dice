@@ -39,6 +39,34 @@ body {
   gap: var(--unit_spacing);
 }
 
+@keyframes dice-container {
+  0% {
+    transform: translatex(-1.2rem);
+  }
+
+  50% {
+    transform: translatex(1.2rem);
+  }
+
+  100% {
+    transform: translatex(-1.2rem);
+  }
+}
+
+.dice-container {
+  animation-name: dice-container;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.dice-container--left {
+  animation-duration: 1.2s;
+}
+
+.dice-container--right {
+  animation-duration: 1.4s;
+}
+
 .dice {
   width: var(--unit_dice-width);
   aspect-ratio: 1/1;
@@ -51,12 +79,20 @@ body {
 
 @keyframes dice-left {
   from {
-    transform: rotatex(0turn) rotatey(0.25turn) rotatez(0.5turn)
+    /* prettier-ignore */
+    transform:
+      rotatex(0turn)
+      rotatey(0.25turn)
+      rotatez(0.5turn)
       translatez(var(--unit_animation-offset));
   }
 
   to {
-    transform: rotatex(1turn) rotatey(1.25turn) rotatez(1.5turn)
+    /* prettier-ignore */
+    transform:
+      rotatex(1turn)
+      rotatey(1.25turn)
+      rotatez(1.5turn)
       translatez(var(--unit_animation-offset));
   }
 }
@@ -67,12 +103,20 @@ body {
 
 @keyframes dice-right {
   from {
-    transform: rotatex(1.25turn) rotatey(1.5turn) rotatez(1turn)
+    /* prettier-ignore */
+    transform:
+      rotatex(1.25turn)
+      rotatey(1.5turn)
+      rotatez(1turn)
       translatez(var(--unit_animation-offset));
   }
 
   to {
-    transform: rotatex(0.25turn) rotatey(0.5turn) rotatez(0turn)
+    /* prettier-ignore */
+    transform:
+      rotatex(0.25turn)
+      rotatey(0.5turn)
+      rotatez(0turn)
       translatez(var(--unit_animation-offset));
   }
 }
@@ -134,7 +178,10 @@ body {
 .face--back::after {
   top: var(--unit_dot-width);
   left: var(--unit_dot-width);
-  box-shadow: 0 calc(var(--unit_dot-width) * 1),
+
+  /* prettier-ignore */
+  box-shadow:
+    0 calc(var(--unit_dot-width) * 1),
     0 calc(var(--unit_dot-width) * 2), calc(var(--unit_dot-width) * 2) 0,
     calc(var(--unit_dot-width) * 2) calc(var(--unit_dot-width) * 1),
     calc(var(--unit_dot-width) * 2) calc(var(--unit_dot-width) * 2);
@@ -148,7 +195,10 @@ body {
 .face--left::after {
   top: var(--unit_dot-width);
   left: var(--unit_dot-width);
-  box-shadow: 0 calc(var(--unit_dot-width) * 2),
+
+  /* prettier-ignore */
+  box-shadow:
+    0 calc(var(--unit_dot-width) * 2),
     calc(var(--unit_dot-width) * 2) 0,
     calc(var(--unit_dot-width) * 1) calc(var(--unit_dot-width) * 1),
     calc(var(--unit_dot-width) * 2) calc(var(--unit_dot-width) * 2);
@@ -162,7 +212,10 @@ body {
 .face--right::after {
   top: var(--unit_dot-width);
   left: var(--unit_dot-width);
-  box-shadow: calc(var(--unit_dot-width) * 2) calc(var(--unit_dot-width) * 2);
+
+  /* prettier-ignore */
+  box-shadow:
+    calc(var(--unit_dot-width) * 2) calc(var(--unit_dot-width) * 2);
 }
 
 /* number 3 */
@@ -173,7 +226,10 @@ body {
 .face--top::after {
   top: var(--unit_dot-width);
   left: var(--unit_dot-width);
-  box-shadow: 0 calc(var(--unit_dot-width) * 2),
+
+  /* prettier-ignore */
+  box-shadow:
+    0 calc(var(--unit_dot-width) * 2),
     calc(var(--unit_dot-width) * 2) 0,
     calc(var(--unit_dot-width) * 2) calc(var(--unit_dot-width) * 2);
 }
@@ -186,6 +242,9 @@ body {
 .face--bottom::after {
   top: var(--unit_dot-width);
   left: var(--unit_dot-width);
-  box-shadow: calc(var(--unit_dot-width) * 1) calc(var(--unit_dot-width) * 1),
+
+  /* prettier-ignore */
+  box-shadow:
+    calc(var(--unit_dot-width) * 1) calc(var(--unit_dot-width) * 1),
     calc(var(--unit_dot-width) * 2) calc(var(--unit_dot-width) * 2);
 }
